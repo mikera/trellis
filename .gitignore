@@ -3,3 +3,4 @@
 /.classpath
 /pom.xml
 /target/
+/.lein-failures
