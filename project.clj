@@ -1,10 +1,11 @@
-(defproject trellis "0.0.1-SNAPSHOT"
+(defproject net.mikera/trellis "0.0.1-SNAPSHOT"
   :description "Trellis Web Framework"
   :url "http://example.com/FIXME"
 
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/tools.reader "0.8.8"]
                  [org.clojure/tools.nrepl "0.2.5"]
+                 
                  ;; CLJ
                  [ring/ring-core "1.3.1"]
                  [org.clojure/data.xml "0.0.8"]
