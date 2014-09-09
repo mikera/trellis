@@ -1,4 +1,4 @@
-(defproject net.mikera/trellis "0.0.1-SNAPSHOT"
+(defproject net.mikera/trellis "0.0.1"
   :description "Trellis Web Framework"
   :url "http://example.com/FIXME"
 
@@ -30,7 +30,8 @@
                  [http-kit "2.1.19"]]
 
   :plugins [[lein-cljsbuild "1.0.3"]
-            [lein-ring "0.8.7"]]
+            [lein-ring "0.8.7"]
+            [lein-release "1.0.5"]]
 
   :ring {:handler pinnacle.core/app
          ;; :init    pinnacle.core/init
