@@ -17,8 +17,7 @@
                  [liberator "0.12.1"]
                  [cheshire "5.3.1"]
                  [net.mikera/clojure-utils "0.6.1"]
-                 [javax.servlet/servlet-api "2.5"]
-                 [com.h2database/h2 "1.4.181"]
+                 [javax.servlet/servlet-api "2.5"]        
                  [com.stuartsierra/component "0.2.2"]
                  ;; CLJS
                  [org.clojure/clojurescript "0.0-2322"]
@@ -28,12 +27,14 @@
                  [cljs-http "0.1.16"]
                  [om "0.7.1"]
                  [http-kit "2.1.19"]]
+  
+  :profiles {:dev {:dependencies [[com.h2database/h2 "1.4.181"]]}}
 
   :plugins [[lein-cljsbuild "1.0.3"]
             [lein-ring "0.8.7"]
             [lein-release "1.0.5"]]
 
-  :ring {:handler pinnacle.core/app
+  :ring {:handler trellis.core/app
          ;; :init    pinnacle.core/init
          }
 
