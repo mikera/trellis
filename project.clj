@@ -19,6 +19,7 @@
                  [net.mikera/clojure-utils "0.6.1"]
                  [javax.servlet/servlet-api "2.5"]        
                  [com.stuartsierra/component "0.2.2"]
+                 
                  ;; CLJS
                  [org.clojure/clojurescript "0.0-2342"]
                  [org.clojure/core.async "0.1.267.0-0d7780-alpha"]
@@ -28,7 +29,9 @@
                  [om "0.7.3"]
                  [http-kit "2.1.19"]]
   
-  :profiles {:dev {:dependencies [[com.h2database/h2 "1.4.181"]]}}
+  :profiles {:dev {:dependencies [[com.h2database/h2 "1.4.181"]
+                                  [net.mikera/cljunit "0.3.1"]]
+                   :java-source-paths ["src/test/java"]}}
 
   :plugins [[lein-cljsbuild "1.0.3"]
             [lein-ring "0.8.7"]
