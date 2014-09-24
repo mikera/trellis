@@ -3,14 +3,14 @@
   :url "http://example.com/FIXME"
 
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/tools.reader "0.8.8"]
-                 [org.clojure/tools.nrepl "0.2.5"]
+                 [org.clojure/tools.reader "0.8.9"]
+                 [org.clojure/tools.nrepl "0.2.6"]
                  
                  ;; CLJ
                  [ring/ring-core "1.3.1"]
                  [org.clojure/data.xml "0.0.8"]
                  [org.clojure/java.jdbc "0.3.5"]
-                 [org.clojure/tools.logging "0.3.0"]
+                 [org.clojure/tools.logging "0.3.1"]
                  [clj-time "0.8.0"]
                  [ring-cors "0.1.4"]
                  [compojure "1.1.9"]
@@ -20,12 +20,12 @@
                  [javax.servlet/servlet-api "2.5"]        
                  [com.stuartsierra/component "0.2.2"]
                  ;; CLJS
-                 [org.clojure/clojurescript "0.0-2322"]
+                 [org.clojure/clojurescript "0.0-2342"]
                  [org.clojure/core.async "0.1.267.0-0d7780-alpha"]
                  [secretary "1.2.1"]
-                 [markdown-clj "0.9.47"]
+                 [markdown-clj "0.9.48"]
                  [cljs-http "0.1.16"]
-                 [om "0.7.1"]
+                 [om "0.7.3"]
                  [http-kit "2.1.19"]]
   
   :profiles {:dev {:dependencies [[com.h2database/h2 "1.4.181"]]}}
