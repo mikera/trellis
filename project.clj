@@ -19,6 +19,7 @@
                  [net.mikera/clojure-utils "0.6.1"]
                  [javax.servlet/servlet-api "2.5"]        
                  [com.stuartsierra/component "0.2.2"]
+                 [prismatic/schema "0.3.0"]
                  
                  ;; CLJS
                  [org.clojure/clojurescript "0.0-2356"]
