@@ -1,8 +1,9 @@
-(ns tellis.test-database
+(ns trellis.test-database
   (:use clojure.test)
+  (:require [clojure.java.jdbc :as j])
   (:require 
-    [com.stuartsierra.component :as component]
-    [trellis.database :as data])
+      [com.stuartsierra.component :as component]
+      [trellis.database :as data])
   (:use [mikera.cljutils error]))
 
 (def test-spec 
@@ -17,4 +18,5 @@
   (let [db (data/new-database test-spec)]
     (is (not (:connection db)))
     (let [db (component/start db)]
-      (is (:connection db)))))
+      (is (:connection db))
+      (j/execute! db ["create table Test (ID bigint PRIMARY KEY AUTO_INCREMENT NOT NULL, Name Varchar)"]))))
