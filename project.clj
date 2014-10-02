@@ -38,7 +38,6 @@
             [lein-release "1.0.5"]]
 
   :ring {:handler trellis.core/app
-         ;; :init    pinnacle.core/init
          }
 
   :source-paths ["src/main/clojure" "src/main/cljs"]
