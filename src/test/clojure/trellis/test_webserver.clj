@@ -7,7 +7,7 @@
   (:use [mikera.cljutils error]))
 
 (deftest webserver-creation
-  (let [ws (web/server identity {:port 9999})
+  (let [ws (web/server web/DEFAULT-HANDLER {:port 9999})
         ws (component/start ws)]
     (is (:server ws))
     (let [ws (component/stop ws)]

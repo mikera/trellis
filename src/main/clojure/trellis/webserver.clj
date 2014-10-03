@@ -6,6 +6,11 @@
 
 (def DEFAULT-PORT 8080)
 
+(defn DEFAULT-HANDLER [request]
+  {:status  200
+   :headers {"Content-Type" "text/html"}
+   :body    "Trellis Default Ring Handler"})
+
 (defrecord WebServer []
   component/Lifecycle
 	  (start [this]
@@ -20,7 +25,12 @@
 	      (dissoc this :server))))
 
 (defn server
+  "Creates a WebServer component with the given ring handler and options map.
+
+   Options map defaults to {:port 8080} if not specified otherwise."
+  ([handler]
+    (server handler {}))
   ([handler opts]
-    (let [opts (or opts {:port DEFAULT-PORT})
+    (let [opts (if (:port opts) (assoc opts :port DEFAULT-PORT))
           opts (assoc opts :handler handler)]
       (map->WebServer opts))))
