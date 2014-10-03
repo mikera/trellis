@@ -18,5 +18,6 @@
 (deftest test-with-component
   (with-component [ws (web/server web/DEFAULT-HANDLER {:port 9999})]
     ;; (println (str ws))
+    (is (== 200 (:status ((:handler ws) {}))))
     (is (:server ws))))
 
