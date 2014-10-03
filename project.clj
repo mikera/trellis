@@ -1,6 +1,6 @@
 (defproject net.mikera/trellis "0.0.3-SNAPSHOT"
   :description "Trellis Web Framework"
-  :url "http://example.com/FIXME"
+  :url "http://github.com/mikera/trellis"
 
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/tools.reader "0.8.9"]
