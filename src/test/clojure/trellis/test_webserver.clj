@@ -5,6 +5,7 @@
       [com.stuartsierra.component :as component]
       [trellis.component :refer [with-component]]
       [trellis.webserver :as web])
+  (:require [org.httpkit.client :as http])
   (:use [mikera.cljutils error]))
 
 (deftest webserver-creation
@@ -19,5 +20,8 @@
   (with-component [ws (web/server web/DEFAULT-HANDLER {:port 9999})]
     ;; (println (str ws))
     (is (== 200 (:status ((:handler ws) {}))))
+;    (let [resp @(http/get (str "http://127.0.0.1:9999/"))]
+;      (println resp)
+;      (is (== 200 (:status resp))))
     (is (:server ws))))
 
