@@ -31,6 +31,6 @@
   ([handler]
     (server handler {}))
   ([handler opts]
-    (let [opts (if (:port opts) (assoc opts :port DEFAULT-PORT))
+    (let [opts (if (:port opts) opts (assoc opts :port DEFAULT-PORT))
           opts (assoc opts :handler handler)]
       (map->WebServer opts))))

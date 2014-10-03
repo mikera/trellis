@@ -10,6 +10,7 @@
   (let [ws (web/server web/DEFAULT-HANDLER {:port 9999})
         ws (component/start ws)]
     (is (:server ws))
+    (is (= 9999 (:port ws)))
     (let [ws (component/stop ws)]
       (is (not (:server ws))))))
 
