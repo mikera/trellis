@@ -1,7 +1,6 @@
 (ns trellis.webserver
   (:require [com.stuartsierra.component :as component]
             [org.httpkit.server :as hks])
-  
   (:use [mikera.cljutils.error]))
 
 (def DEFAULT-PORT 8080)
