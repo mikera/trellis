@@ -13,6 +13,7 @@
     (with-component [s s]
       (is (:ch-recv s))
       ;; TODO: figure out how to test with a Clojure client
+      ;; probably depends on: https://github.com/ptaoussanis/sente/issues/80
       (let []
         ))))
 
