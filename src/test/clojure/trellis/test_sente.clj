@@ -11,5 +11,8 @@
 (deftest sente-test 
   (let [s (sente/sente-server)]
     (with-component [s s]
-      (is (:ch-recv s)))))
+      (is (:ch-recv s))
+      ;; TODO: figure out how to test with a Clojure client
+      (let []
+        ))))
 
