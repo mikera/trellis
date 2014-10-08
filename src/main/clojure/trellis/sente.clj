@@ -6,6 +6,8 @@
     [taoensso.sente :as sente]
     ))
 
+(declare sente-server)
+
 (defrecord SenteServer [ch-recv 
                         send-fn 
                         ajax-post-fn 
