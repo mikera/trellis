@@ -9,15 +9,14 @@
   (:use [mikera.cljutils error]))
 
 (deftest webserver-creation
-  (let [ws (web/server web/DEFAULT-HANDLER {:port 9999})
-        ws (component/start ws)]
-    (is (:server ws))
-    (is (= 9999 (:port ws)))
-    (let [ws (component/stop ws)]
-      (is (not (:server ws))))))
+  (let [ws (web/server web/DEFAULT-HANDLER {:port 9997})]
+    (with-component [ws ws]
+      (is (:server ws))
+      (is (= 9997 (:port ws))))
+    (is (not (:server ws)))))
 
 (deftest test-with-component
-  (with-component [ws (web/server web/DEFAULT-HANDLER {:port 9999})]
+  (with-component [ws (web/server web/DEFAULT-HANDLER {:port 9998})]
     ;; (println (str ws))
     (is (== 200 (:status ((:handler ws) {}))))
 ;    (let [resp @(http/get (str "http://127.0.0.1:9999/"))]

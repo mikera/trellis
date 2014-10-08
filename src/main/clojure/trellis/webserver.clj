@@ -20,7 +20,7 @@
 	
 	  (stop [this]
 	    (when-let [server (:server this)]
-	      (server) ;; calling the server function shuts down the server
+	      (server :timeout 100) ;; calling the server function shuts down the server
 	      (dissoc this :server))))
 
 (defn server
