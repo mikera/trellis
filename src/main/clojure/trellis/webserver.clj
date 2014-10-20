@@ -15,7 +15,12 @@
 	  (start [this]
 	    (let [handler (or (:handler this) (error "No :handler specified for web server"))
             port (or (:port this) (error "No :port specified for web server")) 
-            server (hks/run-server handler {:port port})]
+            server (try
+                     (hks/run-server handler {:port port})
+                     (catch Throwable t
+                       (throw (java.lang.Error.
+                                (str "Error starting server for component: " (pr-str this))
+                                t))))]
 	          (assoc this :server server)))
 	
 	  (stop [this]
