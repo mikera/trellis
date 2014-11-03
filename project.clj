@@ -39,7 +39,7 @@
 
   :plugins [[lein-cljsbuild "1.0.3"]
             [lein-ring "0.8.7"]
-            [lein-release "1.0.5"]]
+            [lein-release "1.0.6"]]
 
   :ring {:handler trellis.core/app
          }
