@@ -20,6 +20,7 @@
                  [javax.servlet/servlet-api "2.5"]        
                  [com.stuartsierra/component "0.2.2"]
                  [prismatic/schema "0.3.3"]
+                 [environ "1.0.0"]
                  
                  ;; CLJS
                  [org.clojure/clojurescript "0.0-2371"]
