@@ -19,7 +19,7 @@
 (deftest test-with-component
   (with-component [ws (web/server web/DEFAULT-HANDLER {:port 8801})]
     ;; (println (str ws))
-    (is (== 200 (:status ((:handler ws) {}))))
+    (is (== 200 (:status ((:handler (:handler ws)) {}))))
 ;    (let [resp @(http/get (str "http://127.0.0.1:9999/"))]
 ;      (println resp)
 ;      (is (== 200 (:status resp))))
