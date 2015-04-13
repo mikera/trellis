@@ -1,4 +1,4 @@
-(defproject net.mikera/trellis "0.0.6-SNAPSHOT"
+(defproject net.mikera/trellis "0.0.6"
   :description "Trellis Web Framework"
   :url "http://github.com/mikera/trellis"
 
