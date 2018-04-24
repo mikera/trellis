@@ -1,4 +1,4 @@
-(defproject net.mikera/trellis "0.0.6"
+(defproject net.mikera/trellis "0.1.0"
   :description "Trellis Web Framework"
   :url "http://github.com/mikera/trellis"
 
@@ -21,7 +21,6 @@
                  [com.stuartsierra/component "0.3.2"]
                  [prismatic/schema "1.1.9"]
                  [environ "1.0.2"]
-
                  ;; CLJS
                  [org.clojure/clojurescript "1.10.238"]
                  [org.clojure/core.async "0.4.474"]
