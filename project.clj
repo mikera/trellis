@@ -3,19 +3,19 @@
   :url "http://github.com/mikera/trellis"
 
   :dependencies [[org.clojure/clojure "1.9.0"]
-                 [org.clojure/tools.reader "1.3.0"]
+                 [org.clojure/tools.reader "1.3.2"]
                  [org.clojure/tools.nrepl "0.2.13"]
 
                  ;; CLJ
                  [ring/ring-core "1.6.3"]
                  [org.clojure/data.xml "0.0.8"]
-                 [org.clojure/java.jdbc "0.7.7"]
+                 [org.clojure/java.jdbc "0.7.8"]
                  [org.clojure/tools.logging "0.4.1"]
-                 [clj-time "0.14.4"]
+                 [clj-time "0.15.1"]
                  [ring-cors "0.1.12"]
                  [compojure "1.6.1"]
                  [liberator "0.15.2"]
-                 [cheshire "5.8.0"]
+                 [cheshire "5.8.1"]
                  [net.mikera/clojure-utils "0.8.0"]
                  [javax.servlet/servlet-api "2.5"]
                  [com.stuartsierra/component "0.3.2"]
@@ -25,7 +25,7 @@
                  [org.clojure/clojurescript "1.10.339"]
                  [org.clojure/core.async "0.4.474"]
                  [secretary "1.2.3"]
-                 [markdown-clj "1.0.2" :exclusions [org.clojure/clojure]]
+                 [markdown-clj "1.0.5" :exclusions [org.clojure/clojure]]
                  [cljs-http "0.1.45"]
                  [om "0.7.3"]
                  [http-kit "2.3.0"]
