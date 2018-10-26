@@ -7,7 +7,7 @@
                  [org.clojure/tools.nrepl "0.2.13"]
 
                  ;; CLJ
-                 [ring/ring-core "1.6.3"]
+                 [ring/ring-core "1.7.0"]
                  [org.clojure/data.xml "0.0.8"]
                  [org.clojure/java.jdbc "0.7.8"]
                  [org.clojure/tools.logging "0.4.1"]
